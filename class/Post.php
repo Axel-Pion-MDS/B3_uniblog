@@ -1,4 +1,10 @@
 <?php
+/**
+ * Class for manage posts
+ *
+ * @copyright  Uniblog
+ * @license    http://www.zend.com/license/3_0.txt   PHP License 3.0
+ */ 
 class Post {
   // Properties
   public $title;
@@ -13,19 +19,11 @@ class Post {
   }
 
   function setAuthor($author){
-      $this->author = $author;
+    $this->author = $author;
   }
   
   function setContent($content){
     $this->content = $content;
-  }
-
-  function setCreatedAt($date){
-    $this->created_at = $date;
-  }
-
-  function setUpdatedAt($date){
-    $this->updated_at = $date;
   }
 
   function getTitle() {
@@ -41,10 +39,10 @@ class Post {
   }
 
   function getCreatedAt(){
-    return $this->createdAt;
+    return $this->created_at;
   }
 
   function getUpdatedAt(){
-    return $this->updatedAt;
+    return $this->updated_at;
   }
 }
