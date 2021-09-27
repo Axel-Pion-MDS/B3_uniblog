@@ -12,7 +12,7 @@
 </head>
 <body>
   <?php
-  include 'header.php';
+  include 'includes/header.php';
   ?>
   <h1>Uniblog</h1>
 </body>
