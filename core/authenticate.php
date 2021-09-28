@@ -20,6 +20,7 @@ if (isset($_POST['Submit'])){
   /* Check Username/password in users.json*/
   foreach($users as $user){
     if ($user['username']=="$Username" && $user['password']==crypt_password($Password)){
+      $_SESSION["user"]=$user['username'];
       header("Location: ../index.php");
       exit;
     }
