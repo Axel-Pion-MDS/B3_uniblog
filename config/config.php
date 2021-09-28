@@ -1,9 +1,9 @@
 <?php
 
-define('__ROOT__', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
+define('__ROOT__', realpath(dirname(__FILE__, 2)));
 
-require(__ROOT__ . 'class/Post.php');
-require(__ROOT__ . 'class/User.php');
+require(__ROOT__ . '/class/Post.php');
+require(__ROOT__ . '/class/User.php');
 
 /**
  * Get all content of database
@@ -13,7 +13,7 @@ require(__ROOT__ . 'class/User.php');
  * @return Array
  */ 
 function get_content($file) {
-  $data = file_get_contents(__ROOT__ . 'db/' . $file . '.json');
+  $data = file_get_contents(__ROOT__ . '/db/' . $file . '.json');
   return json_decode($data, true);
 }
 
@@ -26,10 +26,9 @@ function get_content($file) {
  */ 
 function add_content($newData, $file) {
   $oldData = get_content($file);
-  var_dump($oldData);
   array_push($oldData, $newData);
   $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
-  file_put_contents(__ROOT__ . 'db/' . $file . '.json', $jsonData);
+  file_put_contents(__ROOT__ . '/db/' . $file . '.json', $jsonData);
 }
 
 /**
