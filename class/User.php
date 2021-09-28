@@ -5,7 +5,7 @@
  *
  * @copyright  Uniblog
  * @license    http://www.zend.com/license/3_0.txt   PHP License 3.0
- */ ;
+ */
 class User {
   // Properties
   public $username;
@@ -19,7 +19,7 @@ class User {
   }
 
   function setPassword($password){
-      $this->password = $password;
+    $this->password = $password;
   }
 
   function setCreatedAt($date){

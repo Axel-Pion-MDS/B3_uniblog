@@ -1,19 +1,14 @@
 <?php
-  require("config/config.php");
+  require('config/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <?php include('includes/head.php') ?>
   <title>Uniblog</title>
 </head>
 <body>
-  <?php
-  include 'includes/header.php';
-  ?>
+  <?php include('includes/header.php') ?>
   <h1>Uniblog</h1>
 </body>
 </html>
