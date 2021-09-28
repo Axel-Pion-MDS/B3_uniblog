@@ -1,12 +1,19 @@
-;<?php
-  if(!isset($_GET['id'])) {
+<?php
+  require('config/config.php');
+  
+  // Check if id is pass in URL
+  if (!isset($_GET['id'])) {
     header('Location: index.php');
     exit;
   }
-  require('config/config.php');
 
   $posts = get_content("posts");
-  $data = $posts[0];
+  $post = $posts[$_GET['id']];
+
+  if (empty($post)) {
+    header('Location: index.php');
+    exit;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,10 +23,14 @@
 </head>
 <body>
   <?php include('includes/header.php') ?>
+  <a class="ml-4 btn btn-outline-danger mb-3 ml-1" href="index.php">Back to home</a>
   <article class="flex-column p-3 mx-4 border border-dark rounded mb-4">
-    <h2><?= $data['title'] ?></h2>
-    <p class="font-italic text-black-50"> Publied by <?= $data['author'] ?> and date : <?= $data['created_at'] ?> </p>
-    <p><?= $data['content'] ?></p>
+    <figure>
+      <img src="<?= $post['img'] ?>" alt="<?= $post['title'] ?>">
+    </figure>
+    <h2><?= $post['title'] ?></h2>
+    <p class="text-muted">By <a href="#"><?= $post['author'] ?></a> | <?= date('d M Y H:i', $post['created_at']) ?></p>
+    <p><?= $post['content'] ?></p>
   </article>
   <?php include('includes/footer.php') ?>
 </body>
