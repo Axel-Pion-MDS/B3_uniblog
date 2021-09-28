@@ -17,10 +17,10 @@
         </form>
       </li>
       <li class="nav-item">
-        <a class="btn btn-outline-success my-2 my-sm-0 ml-1" href="#">Login</a>
+        <a class="btn btn-outline-success my-2 my-sm-0 ml-1" href="login.php">Login</a>
       </li>
       <li class="nav-item">
-        <a class="btn btn-outline-primary my-2 my-sm-0 ml-1" href="#">Inscription</a>
+        <a class="btn btn-outline-primary my-2 my-sm-0 ml-1" href="register.php">Inscription</a>
       </li>
     </ul>
   </div>

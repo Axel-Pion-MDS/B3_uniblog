@@ -5,10 +5,10 @@
     </div>
       <ul>
         <li class="d-flex justify-content-center">
-          <a class="mr-3" href="../index.php">Accueil</a>
+          <a class="mr-3" href="index.php">Accueil</a>
           <a class="mr-3" href="#">Blog</a>
-          <a class="mr-3" href="#">Inscription</a>
-          <a class="mr-3" href="#">Connexion</a>
+          <a class="mr-3" href="register.php">Inscription</a>
+          <a class="mr-3" href="login.php">Connexion</a>
         </li>
       </ul>
     </div>
