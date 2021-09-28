@@ -1,4 +1,4 @@
-<footer class="fixed-bottom">
+<footer class="fixed-bottom mt-2">
   <div class="d-center mt-5 pt-2 pb-2 navbar-dark bg-dark">
     <div class=" footer-copyright text-center py-3 text-success">© 2020 Copyright:
       <a href="https://mdbootstrap.com/"> Uniblog</a>

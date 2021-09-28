@@ -25,7 +25,6 @@ function get_content($file) {
  */ 
 function add_content($newData, $file) {
   $oldData = get_content($file);
-  var_dump($oldData);
   array_unshift($oldData, $newData);
   $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
   var_dump($jsonData);
