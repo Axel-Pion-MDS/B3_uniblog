@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class for manage posts
+ * Class for manage users
  *
  * @copyright  Uniblog
  * @license    http://www.zend.com/license/3_0.txt   PHP License 3.0

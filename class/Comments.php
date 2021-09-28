@@ -5,7 +5,7 @@
  * @copyright  Uniblog
  * @license    http://www.zend.com/license/3_0.txt   PHP License 3.0
  */ 
-class Post {
+class Comments {
   // Properties
   public $content;
   public $author;
