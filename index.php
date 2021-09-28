@@ -10,5 +10,6 @@
 <body>
   <?php include('includes/header.php') ?>
   <h1>Uniblog</h1>
+  <?php include('includes/footer.php') ?>
 </body>
 </html>
