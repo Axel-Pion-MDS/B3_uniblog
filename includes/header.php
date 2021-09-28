@@ -20,10 +20,10 @@
         </form>
       </li>
       <li class="nav-item">
-        <button class="btn btn-outline-success my-2 my-sm-0 ml-1" href="#">Login</button>
+        <a class="btn btn-outline-success my-2 my-sm-0 ml-1" href="#">Login</a>
       </li>
       <li class="nav-item">
-        <button class="btn btn-outline-primary my-2 my-sm-0 ml-1" href="#">Inscription</button>
+        <a class="btn btn-outline-primary my-2 my-sm-0 ml-1" href="#">Inscription</a>
       </li>
     </ul>
   </div>

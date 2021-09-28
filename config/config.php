@@ -1,5 +1,5 @@
 <?php
-define('__ROOT__', realpath(dirname(__FILE__)));
+define('__ROOT__', realpath(dirname(__FILE__, 2)));
 
 require(__ROOT__ . '/class/Post.php');
 require(__ROOT__ . '/class/User.php');
