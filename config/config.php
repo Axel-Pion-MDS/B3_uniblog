@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 define('__ROOT__', realpath(dirname(__FILE__, 2)));
 
 require(__ROOT__ . '/class/Post.php');
@@ -44,4 +46,16 @@ function crypt_password($password) {
   $step3 = hash('sha512', $step2);
 
   return $step3;
+}
+
+/**
+ * Get if is active link or not
+ *
+ * @param String   $file  Name of file who want to test
+ *
+ * @return String
+ */
+function isActive($file) {
+  $current_file = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+  return $current_file == $file ? 'active' : '';
 }
