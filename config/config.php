@@ -1,6 +1,5 @@
 <?php
-
-define('__ROOT__', realpath(dirname(__FILE__, 2)));
+define('__ROOT__', realpath(dirname(__FILE__)));
 
 require(__ROOT__ . '/class/Post.php');
 require(__ROOT__ . '/class/User.php');
@@ -26,7 +25,8 @@ function get_content($file) {
  */ 
 function add_content($newData, $file) {
   $oldData = get_content($file);
-  array_push($oldData, $newData);
+  var_dump($oldData);
+  array_unshift($oldData, $newData);
   $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
   file_put_contents(__ROOT__ . '/db/' . $file . '.json', $jsonData);
 }

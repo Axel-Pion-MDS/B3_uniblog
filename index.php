@@ -1,4 +1,6 @@
 <?php
+  define('__ROOT__', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
+
   require('config/config.php');
 ?>
 <!DOCTYPE html>
@@ -10,6 +12,6 @@
 <body>
   <?php include('includes/header.php') ?>
   <h1>Uniblog</h1>
-  <?php include('includes/footer.php') ?>
 </body>
 </html>
+
