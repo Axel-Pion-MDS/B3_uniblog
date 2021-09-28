@@ -5,25 +5,24 @@
 <html lang="fr">
 <head>
   <?php include('includes/head.php') ?>
-  <title>Uniblog</title>
+  <title>Login | Uniblog</title>
 </head>
 <body>
-  <?php
-  include 'includes/header.php';
-  ?>
-  <div class="card-body">
-  <form action="core/authenticate.php" method="post" name="Login_Form">
-    <div class="form-group">
-      <label for="exampleInputEmail1" class="text-success">Username</label>
-        <input type="text" name="Username" class="form-control" placeholder="Username">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1" class="text-success" >Password</label>
-        <input type="password" name="Password" class="form-control" placeholder="Password">
-    </div>
-      <button class="btn btn-success m-auto" name="Submit"> Connect</button>
-  </form>
-</div>
-<?php include('includes/footer.php') ?>
+  <?php include('includes/header.php') ?>
+  <div class="card-body col-4 mx-auto">
+    <h2 class="mb-4">Sign in</h2>
+    <form action="core/authentication.php" method="POST">
+      <div class="form-group">
+        <label for="username" class="text-success">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="Username" id="username">
+      </div>
+      <div class="form-group">
+        <label for="password" class="text-success" >Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Password" id="password">
+      </div>
+      <button class="btn btn-success m-auto" name="submit">Sign in</button>
+    </form>
+  </div>
+  <?php include('includes/footer.php') ?>
 </body>
 </html>
