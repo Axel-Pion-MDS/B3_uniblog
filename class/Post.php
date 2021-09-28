@@ -10,6 +10,7 @@ class Post {
   public $title;
   public $author;
   public $content;
+  public $img;
   public $created_at;
   public $updated_at;
 
@@ -24,6 +25,10 @@ class Post {
   
   function setContent($content){
     $this->content = $content;
+  }
+
+  function setImg($link){
+    $this->img = $link;
   }
 
   function setCreatedAt($date){
@@ -44,6 +49,10 @@ class Post {
 
   function getContent(){
     return $this->content;
+  }
+
+  function getImg(){
+    return $this->img;
   }
 
   function getCreatedAt(){
