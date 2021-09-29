@@ -27,7 +27,7 @@ function get_content($file) {
  */ 
 function add_content($newData, $file) {
   $oldData = get_content($file);
-  array_unshift($oldData, $newData);
+  array_push($oldData, $newData);
   $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
   file_put_contents(__ROOT__ . '/db/' . $file . '.json', $jsonData);
 }
