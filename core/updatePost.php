@@ -27,8 +27,31 @@ if (empty($_POST["title"]) || empty($_POST["author"]) || empty($_POST["content"]
 	exit;
 }
 
+
+// Gets the data from the .json file
+$getData = get_content('posts');
+
+// Gets the datas from the postUpdate.php form
+$title = $_POST["title"];
+$author = $_POST["author"];
+$content = $_POST["content"];
+$img = $_POST["img"];
+
+$date = date_create();
+
+$updated_at = date_timestamp_get($date);
+
+// Creates a new Post and adds each data inside that Post
+$post = new Post();
+$post->setTitle($title);
+$post->setAuthor($author);
+$post->setContent($content);
+$post->setImg($img);
+$post->setCreatedAt($getData[$postId]['created_at']);
+$post->setUpdatedAt($updated_at);
+
 // Updates the post with the new post at the correct id
-delete_content($postId, $post, 'posts');
+update_content($postId, $post, 'posts');
 
 header("Location: ../index.php");
 exit;
