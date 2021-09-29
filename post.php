@@ -19,7 +19,7 @@
 <html lang="fr">
 <head>
   <?php include('includes/head.php') ?>
-  <title>Uniblog</title>
+  <title>Article | Uniblog</title>
 </head>
 <body>
   <?php include('includes/header.php') ?>

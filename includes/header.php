@@ -4,7 +4,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item <?= isActive("index.php") ?>">
-          <a class="nav-link" href="index.php">Accueil</a>
+          <a class="nav-link" href="index.php">Homepage</a>
         </li>
         <?php if (isset($_SESSION["user"])) { ?>
           <li class="nav-item <?= isActive("addPost.php") ?>">
@@ -18,7 +18,7 @@
             <a class="btn btn-success my-2 my-sm-0 ml-1" href="login.php">Login</a>
           </li>
           <li class="nav-item <?= isActive("register.php") ?>">
-            <a class="btn btn-primary my-2 my-sm-0 ml-1" href="register.php">Inscription</a>
+            <a class="btn btn-primary my-2 my-sm-0 ml-1" href="register.php">Register</a>
           </li>
           <?php } else { ?>
             <li class="nav-item">

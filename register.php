@@ -5,7 +5,7 @@
 <html lang="fr">
 <head>
   <?php include('includes/head.php') ?>
-  <title>Login | Uniblog</title>
+  <title>Create account | Uniblog</title>
 </head>
 <body>
   <?php include('includes/header.php') ?>
