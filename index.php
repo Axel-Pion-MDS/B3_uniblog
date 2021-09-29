@@ -10,13 +10,13 @@
 </head>
 <body>
   <?php include('includes/header.php') ?>
-  <div class="card-body ml-4">
+  <div class="card-body mx-4">
     <h2 class="mb-4">Overwiew of all articles</h2>
     <?php foreach ($posts as $key => $post) { ?>
-      <article class="row mb-2 border rounded">
+      <article class="row mb-3 rounded shadow">
         <div class="col-3 p-0 w-100"><a href="post.php?id=<?= $key ?>"><img src="<?= $post['img'] ?>" class="img-fluid rounded"></a>
         </div>
-        <div class="col-sm-9 p-3">
+        <div class="col-sm-9 p-4">
           <h3 class="title"><a href="post.php?id=<?= $key ?>"><?= $post['title'] ?></a></h3>
           <p class="text-muted">By <a href="#"><?= $post['author'] ?></a> | <?= date('d M Y H:i', $post['created_at']) ?></p>
           <p><?= substr($post['content'],0,300) . '...' ?></p>
