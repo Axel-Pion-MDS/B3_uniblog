@@ -23,7 +23,8 @@
 </head>
 <body>
   <?php include('includes/header.php') ?>
-  <a class="ml-4 btn btn-outline-danger mb-3 ml-1" href="index.php">Back to home</a>
+  <a class="ml-4 btn btn-outline-danger mb-3 ml-1" href="index.php">Back home</a>
+  <a class="ml-4 btn btn-outline-warning mb-3 ml-1" href="postUpdate.php?id=<?= $_GET['id'] ?>">Update post</a>
   <article class="flex-column p-3 mx-4 border border-dark rounded mb-4">
     <figure>
       <img src="<?= $post['img'] ?>" alt="<?= $post['title'] ?>">

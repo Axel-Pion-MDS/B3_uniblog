@@ -29,6 +29,21 @@ function add_content($newData, $file) {
   $oldData = get_content($file);
   array_unshift($oldData, $newData);
   $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
+  file_put_contents(__ROOT__ . '/db/' . $file . '.json', $jsonData);
+}
+
+/**
+ * Updates content in database
+ *
+ * @param Int      $id       The id of the post you want to update
+ * @param Array    $newData  All data in array you want to add in database
+ * @param String   $file     What file you want to get, choices: "posts", "users", "comments"
+ * 
+ */ 
+function update_content($id, $newData, $file) {
+  $oldData = get_content($file);
+  $oldData[$id] = $newData;
+  $jsonData = json_encode($oldData, JSON_FORCE_OBJECT | JSON_PRETTY_PRINT);
   var_dump($jsonData);
   file_put_contents(__ROOT__ . '/db/' . $file . '.json', $jsonData);
 }
